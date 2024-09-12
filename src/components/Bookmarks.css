@@ -1,0 +1,38 @@
+.bookmarks-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.bookmarks-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.bookmark-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.bookmark-title {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.bookmark-location, .bookmark-salary, .bookmark-phone {
+  margin: 10px 0;
+}
+
+.bookmark-salary {
+  color: #2a9d8f;
+}
+
+.bookmark-phone {
+  color: #e76f51;
+}

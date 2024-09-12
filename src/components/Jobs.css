@@ -1,0 +1,49 @@
+.jobs-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.jobs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.job-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.2s;
+}
+
+.job-card:hover {
+  transform: scale(1.05);
+}
+
+.job-title {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.job-location, .job-salary, .job-phone {
+  margin: 10px 0;
+}
+
+.job-salary {
+  color: #2a9d8f;
+}
+
+.job-phone {
+  color: #e76f51;
+}
+
+footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
