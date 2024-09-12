@@ -22,10 +22,10 @@ const App = () => {
     const jobExists = bookmarkedJobs.find((item) => item.id === job.id);
     let updatedBookmarks;
     if (jobExists) {
-      // Remove bookmark
+      
       updatedBookmarks = bookmarkedJobs.filter((item) => item.id !== job.id);
     } else {
-      // Add bookmark
+      
       updatedBookmarks = [...bookmarkedJobs, job];
     }
     setBookmarkedJobs(updatedBookmarks);
