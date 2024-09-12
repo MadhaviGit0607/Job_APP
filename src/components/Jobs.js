@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Jobs.css'; 
-// Sample API URL and page size
+
 const API_URL = 'https://testapi.getlokalapp.com/common/jobs?page=1';
 
 
