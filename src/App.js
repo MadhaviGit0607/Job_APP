@@ -5,7 +5,7 @@ import Bookmarks from './components/Bookmarks';
 import JobDetails from './components/JobDetails';
 import './App.css';
 
-// Utility functions to handle localStorage
+
 const getBookmarksFromStorage = () => {
   const storedBookmarks = localStorage.getItem('bookmarkedJobs');
   return storedBookmarks ? JSON.parse(storedBookmarks) : [];
