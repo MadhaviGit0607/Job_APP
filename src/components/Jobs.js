@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Jobs.css'; 
-// Sample API URL and page size
+
 const API_URL = 'https://testapi.getlokalapp.com/common/jobs?page=1';
+
 
 
 const Jobs = ({ onBookmark }) => {
@@ -12,15 +13,15 @@ const Jobs = ({ onBookmark }) => {
   const [page, setPage] = useState(1);
   const navigate = useNavigate();
 
-  const fetchJobs = useCallback(async (pageNum) => {
+  const fetchJobs = useCallback(async () => {
     setLoading(true);
     try {
-      const response = await fetch(`${API_URL}?page=${pageNum}`);
+      const response = await fetch(`${API_URL}`);
       const data = await response.json();
-      if (data.jobs.length === 0) {
-        setHasMore(false);
+      if (data.results.length === 0) {
+        setHasMore(false)
       } else {
-        setJobs((prevJobs) => [...prevJobs, ...data.jobs]);
+        setJobs(prevJobs => [...prevJobs, ...data.results])
       }
     } catch (error) {
       console.error('Error fetching jobs:', error);
@@ -58,7 +59,7 @@ const Jobs = ({ onBookmark }) => {
 
   return (
     <div className="jobs-container">
-      <h1>Jobs</h1>
+      <h1>Jobs Search</h1>
       <div className="jobs-list">
         {jobs.length === 0 && !loading && <p>No jobs available.</p>}
         {jobs.map((job) => (
@@ -68,7 +69,7 @@ const Jobs = ({ onBookmark }) => {
             <p className="job-salary">Salary: ${job.salary}</p>
             <p className="job-phone">Contact: {job.phone}</p>
             <button className="bookmark-button" onClick={(e) => {
-              e.stopPropagation(); // Prevent the card click event
+              e.stopPropagation();
               handleBookmarkClick(job);
             }}>
               {job.isBookmarked ? 'Unbookmark' : 'Bookmark'}

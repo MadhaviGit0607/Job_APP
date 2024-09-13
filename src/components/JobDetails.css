@@ -2,6 +2,8 @@
   padding: 20px;
   max-width: 800px;
   margin: auto;
+  border-radius: 10px;
+
 }
 
 .job-detail h1 {

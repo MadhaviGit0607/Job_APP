@@ -1,91 +1,67 @@
 /* Reset some default browser styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Global Styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
-/* Container Styles */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Navbar Styles */
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #333;
-  color: white;
-  padding: 10px 0;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  padding: 10px 20px;
-}
-
-.navbar a:hover {
-  background-color: #555;
-  border-radius: 4px;
-}
-
-/* Loading and Error Styles */
-.loading, .error {
-  text-align: center;
-  margin: 20px;
-  font-size: 18px;
-  color: #666;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-
-  .navbar a {
-    padding: 10px;
-    font-size: 14px;
+  
+  /* Global Styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
   }
-
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  /* Container Styles */
   .container {
-    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
   }
-}
-
-@media (max-width: 480px) {
-  .navbar a {
-    padding: 8px;
-    font-size: 12px;
+  
+  
+  /* Loading and Error Styles */
+  .loading, .error {
+    text-align: center;
+    margin: 20px;
+    font-size: 18px;
+    color: #666;
   }
-
-  .container {
-    padding: 5px;
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar a {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .container {
+      padding: 10px;
+    }
   }
-}
+  
+  @media (max-width: 480px) {
+    .navbar a {
+      padding: 8px;
+      font-size: 12px;
+    }
+  
+    .container {
+      padding: 5px;
+    }
+  }
+  

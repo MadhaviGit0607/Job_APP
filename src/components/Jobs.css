@@ -2,12 +2,20 @@
   padding: 20px;
   max-width: 1200px;
   margin: auto;
-}
+  background-image: url("https://judgesandlawyers.com/wp-content/uploads/2022/10/jobs-1.jpg");
+  background-size: cover;
+  
 
+}
+h1{
+  color: blueviolet;
+  font-size: 40px;
+  text-align: center;
+}
 .jobs-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  margin: 40px;
 }
 
 .job-card {
@@ -45,5 +53,6 @@
 footer {
   background-color: #f1f1f1;
   padding: 10px;
+  margin: auto;
 }
 

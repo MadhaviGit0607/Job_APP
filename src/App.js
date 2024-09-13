@@ -5,7 +5,6 @@ import Bookmarks from './components/Bookmarks';
 import JobDetails from './components/JobDetails';
 import './App.css';
 
-// Utility functions to handle localStorage
 const getBookmarksFromStorage = () => {
   const storedBookmarks = localStorage.getItem('bookmarkedJobs');
   return storedBookmarks ? JSON.parse(storedBookmarks) : [];
@@ -25,7 +24,6 @@ const App = () => {
       // Remove bookmark
       updatedBookmarks = bookmarkedJobs.filter((item) => item.id !== job.id);
     } else {
-      // Add bookmark
       updatedBookmarks = [...bookmarkedJobs, job];
     }
     setBookmarkedJobs(updatedBookmarks);
@@ -39,9 +37,9 @@ const App = () => {
         <Route path="/job/:id" element={<JobDetails />} />
         <Route path="/bookmarks" element={<Bookmarks bookmarkedJobs={bookmarkedJobs} />} />
       </Routes>
-      <footer style={{ position: 'fixed', bottom: 0, width: '100%', textAlign: 'center' }}>
+      <footer style={{ position: 'fixed', bottom: 0, width: '100%', textAlign: 'center'}}>
         <button onClick={() => window.location.href = '/'}>Jobs</button>
-        <button onClick={() => window.location.href = '/bookmarks'}>Bookmarks</button>
+        <button className="btn btn-primary bookmark-button" onClick={() => window.location.href = '/bookmarks'}>Bookmarks</button>
       </footer>
     </Router>
   );

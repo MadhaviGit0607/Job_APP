@@ -11,11 +11,11 @@ const JobDetails = () => {
   useEffect(() => {
     const fetchJobDetail = async () => {
       try {
-        const response = await fetch(`${API_URL}/${id}`);
+        const response = await fetch(`${API_URL}`);
         const data = await response.json();
         setJob(data);
       } catch (error) {
-        console.error('Error fetching job details:', error);
+        console.error('Error fetching job details:', error.message);
       } finally {
         setLoading(false);
       }
