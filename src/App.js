@@ -3,12 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Jobs from './components/Jobs';
 import Bookmarks from './components/Bookmarks';
 import JobDetails from './components/JobDetails';
-import './App.css';
+import './App.css
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 15c86cbfd1fa5e9fa229e674f5bd4fe6bf660a8a
 const getBookmarksFromStorage = () => {
   const storedBookmarks = localStorage.getItem('bookmarkedJobs');
   return storedBookmarks ? JSON.parse(storedBookmarks) : [];
@@ -28,10 +24,6 @@ const App = () => {
       
       updatedBookmarks = bookmarkedJobs.filter((item) => item.id !== job.id);
     } else {
-<<<<<<< HEAD
-=======
-      
->>>>>>> 15c86cbfd1fa5e9fa229e674f5bd4fe6bf660a8a
       updatedBookmarks = [...bookmarkedJobs, job];
     }
     setBookmarkedJobs(updatedBookmarks);
