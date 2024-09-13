@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Jobs from './components/Jobs';
 import Bookmarks from './components/Bookmarks';
 import JobDetails from './components/JobDetails';
-import './App.css
+import './App.css'
 
 const getBookmarksFromStorage = () => {
   const storedBookmarks = localStorage.getItem('bookmarkedJobs');
